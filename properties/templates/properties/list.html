@@ -4,7 +4,7 @@
     <title>Property Listings</title>
 </head>
 <body>
-    <h1>Property Listings</h1>
+    <h1>Property Listings (Low-level Cache)</h1>
     <ul>
         {% for property in properties %}
         <li>
@@ -14,6 +14,8 @@
             <p>Location: {{ property.location }}</p>
             <p>Posted: {{ property.created_at }}</p>
         </li>
+        {% empty %}
+        <li>No properties available</li>
         {% endfor %}
     </ul>
 </body>
